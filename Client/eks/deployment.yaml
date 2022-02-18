@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my_app-deployment
+  labels:
+    app: my_app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my_app
+  template:
+    metadata:
+      labels:
+        app: my_app
+    spec:
+      containers:
+        - name: my_app
+          image: <AWS_ACCOUNT_ID>.dkr.ecr.<AWS_REGION>.amazonaws.com/<AWS_ECR_REPOSITORY>
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 4200
