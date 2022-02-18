@@ -11,7 +11,7 @@
 - [x] Build on commit
 - [x] Deploy Docker image to ECR
 - [x] Pull latest image from ECR to EKS
-- [x] Run project
+- [x] Deploy project
 
 ## ✨ Technologies
 
