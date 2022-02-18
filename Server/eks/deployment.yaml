@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my_server-deployment
+  labels:
+    app: my_server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my_server
+  template:
+    metadata:
+      labels:
+        app: my_server
+    spec:
+      containers:
+        - name: my_server
+          image: <AWS_ACCOUNT_ID>.dkr.ecr.<AWS_REGION>.amazonaws.com/<AWS_ECR_REPOSITORY>:latest
+          ports:
+            - containerPort: 8000
