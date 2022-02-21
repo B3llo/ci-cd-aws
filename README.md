@@ -20,4 +20,6 @@
 - [x] AWS
 - [x] ECR
 - [x] EKS
+- [x] Nginx
+- [x] Let's Encrypt
 - [x] GitHub Actions
